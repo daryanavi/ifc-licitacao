@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>IFC Licitações</title>
+
+    <!-- Importa CSS -->
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <!-- Importa jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Importa vue -->
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <!-- Cria um novo <li> para cada cada licitação passada como parâmetro pelo componente vue -->
+        <li v-for="l in licitacoes" v-bind:key="l.id" :class="{ 'cor-lido': l.lido }">
+          <h1>{{ l.titulo }}</h1>
+          <p><i>{{ l.dataPublicacao }}</i></p>
+          <p>Endereço Eletônico: <a :href="'http://' + l.enderecoEletronico">{{ l.enderecoEletronico }}</a></p>
+          <p>Data de Abertura: {{ l.dataAbertura }}</p>
+          <p>Horário: {{ l.horarioAbertura }}</p>
+          <p>Código UASG: {{ l.codigoUASG }}</p>
+          <p>Objeto: {{ l.objeto }}</p>
+          <p><strong>Arquivos:</strong></p>
+
+          <!-- Cria um novo <p> para cada cada arquivo na licitação -->
+          <p v-for="a in l.arquivos" v-bind:key="a">
+            <a :href="a" target="_blank">{{ a }}</a>
+          </p>
+
+          <!-- Botão para marcar licitação como lida; faz comunicação com API -->
+          <button class="botao-lido" :class="{ 'invisivel': l.lido }" @click="marcarLido(l)">Marcar como lida</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Importa javascript -->
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
