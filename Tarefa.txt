@@ -1,0 +1,18 @@
+Olá Daryan,
+
+Obrigado pela entrevista de hoje a tarde.
+Seguido da conversa que tivemos, sugiro, a seguir, uma atividade com o intuito de te avaliar tecnicamente.
+
+Desafio: 
+Baseado nos serviços da Effecti, gostaria que você fizesse a modelagem de um software para capturar as licitações de pregão, disponíveis em link. Não é necessário fazer a camada de persistência, somente o serviço de captura e modelo de dados que seriam extraídos dessa captura.
+Disponibilizar essas oportunidades na web por meio de uma interface que permita ao usuário marcar a oportunidade como lida.
+
+Requisitos:
+- Aplicação web utilizando o conceito de SPA;
+- Aplicação backend utilizando o conceito de REST para as operações e integrações do frontend;
+- Captura preferencialmente em Java;
+- Não será avaliado questões de usabilidade e interface gráfica.
+
+Por favor, avalie o esforço necessário e responda a esse email sugerindo uma data limite de entrega.
+
+Tendo alguma dúvida não hesite em me contatar.
